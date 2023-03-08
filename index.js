@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    "no-console": "warn",
+    "no-console": ["error", { allow: ["warn", "error"] }],
   },
   extends: ["prettier"],
 };
