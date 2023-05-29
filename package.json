@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-yuxi",
-  "version": "0.0.4",
+  "version": "0.0.5-0",
   "description": "Commonly used eslint config",
   "main": "index.js",
   "scripts": {
