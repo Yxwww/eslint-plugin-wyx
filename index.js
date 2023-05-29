@@ -24,6 +24,9 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier",
       ],
+      rules: {
+        "@typescript-eslint/no-empty-function": "warn", // empty function could be avoided using noop, reporting it as error is too strict
+      },
       files: ["*.ts", "*.tsx"],
     },
   ],
