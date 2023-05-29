@@ -5,17 +5,26 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  overrides: [
-    {
-      extends: ["xo-typescript"],
-      files: ["*.ts", "*.tsx"],
-    },
-  ],
   parserOptions: {
     ecmaVersion: "latest",
   },
   rules: {
     "no-console": ["error", { allow: ["warn", "error"] }],
   },
-  extends: ["xo", "prettier"],
+  root: false,
+  extends: ["prettier"],
+
+  // Keep TS config seperated from JS files.
+  overrides: [
+    {
+      parser: "@typescript-eslint/parser",
+      plugins: ["@typescript-eslint"],
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+      ],
+      files: ["*.ts", "*.tsx"],
+    },
+  ],
 };
